@@ -1,0 +1,13 @@
+# vi: ft=python
+import sys
+'''
+Wrapper for executing pdf app
+'''
+sys.path.append(".")
+sys.path.append("..")
+
+import app
+
+if __name__ == '__main__':
+    pdf = app.PDFController()
+    pdf.main()
