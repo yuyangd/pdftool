@@ -1,8 +1,8 @@
 import os.path
 import sys
 import app
-import pdf_jpg2pdf
-import pdf_merge
+from . import pdf_jpg2pdf
+from . import pdf_merge
 from cmd import Cmd
 
 class PDFPrompt(Cmd):
@@ -27,7 +27,7 @@ class PDFPrompt(Cmd):
             jpg = pdf_jpg2pdf.JpgPrompt()
             jpg.convert(filename)
         else:
-            print "Please specify filename, type 'help' for more info"
+            print("Please specify filename, type 'help' for more info")
 
     def do_merge(self, args):
         """
@@ -41,9 +41,9 @@ class PDFPrompt(Cmd):
             if '/' in head:
                 path = head
             else:
-                print "Please specify the absolute path of the files"
+                print("Please specify the absolute path of the files")
                 return false
             mg = pdf_merge.Merge()
             mg.merge(args, path)
         else:
-            print "Please specify path and filenames, type 'help' for more info"
+            print("Please specify path and filenames, type 'help' for more info")

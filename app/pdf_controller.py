@@ -1,6 +1,7 @@
 import time
+from . import pdf_common
 from pyfiglet import Figlet
-import pdf_common
+
 
 class PDFController(object):
     def main(self):

@@ -1,5 +1,5 @@
 from PyPDF2 import PdfFileWriter, PdfFileReader
-import pdf_common
+from . import pdf_common
 import os
 
 class Merge:
@@ -11,13 +11,13 @@ class Merge:
         try:
             output.write(file(path+"/combined.pdf","wb"))
         except:
-            print "Failed to merge"
+            print("Failed to merge")
 
     def append_pdf(self, input, output):
         try:
             [output.addPage(input.getPage(page_num)) for page_num in range(input.numPages)]
         except:
-            print "append pdf failed"
+            print("append pdf failed")
 
     def checkfile(self, file, path):
         if os.path.exists(path+file):
