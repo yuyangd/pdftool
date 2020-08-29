@@ -1,4 +1,4 @@
-# vi: ft=python
+#!/usr/bin/env python
 import sys
 '''
 Wrapper for executing pdf app
