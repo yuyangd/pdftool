@@ -1,4 +1,4 @@
-pypdf2==1.25.1
+pypdf2==1.27.5
 pillow>=7.1.0
 pylint==1.4.4
 pyfiglet==0.7.4
